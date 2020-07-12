@@ -1,0 +1,40 @@
+server:
+  port: 2002
+spring:
+  application:
+    name: seata-storage-service
+  datasource:
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/seata_storage?useSSL=false&characterEncoding=UTF-8
+      username: root
+      password: 196610121
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    alibaba:
+      seata:
+        tx-service-group: shop-server-group
+feign:
+  hystrix:
+    enabled: false
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+# seata 配置
+seata:
+  enabled: true
+  application-id: seata-storage-service # 服务名
+  #tx-service-group: storage-server-group # 自定义事务分组名称
+  enable-auto-data-source-proxy: true # 是否启用自动数据源代理
+  use-jdk-proxy: false
+  registry:
+    type: nacos # 注册中心为 nacos
+    nacos:
+      server-addr: 127.0.0.1:8848
+      cluster: default
+  config:
+    type: nacos # 配置中心为 nacos 模式
+    nacos:
+      server-addr: 127.0.0.1:8848
+      group: SEATA_GROUP
