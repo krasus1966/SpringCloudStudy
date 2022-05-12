@@ -16,7 +16,7 @@ import top.krasus1966.springcloud.entities.Payment;
 public interface PaymentFeignService {
 
     @GetMapping("/payment/get/{id}")
-     CommonResult<Payment> getPaymentById(@PathVariable("id")Long id);
+    CommonResult<Payment> getPaymentById(@PathVariable("id")Long id);
 
     @GetMapping("/payment/feign/timeout")
     String paymentFeignTimeout();

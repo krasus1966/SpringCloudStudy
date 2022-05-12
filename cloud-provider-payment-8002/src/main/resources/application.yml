@@ -9,7 +9,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/start_cloud?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
-    password: 196610121
+    password:
 
 
 

@@ -28,13 +28,21 @@ spring:
           uri: lb://cloud-payment-service-eureka
           predicates:
             - Path=/payment/lb/**
+    nacos:
+      discovery:
+        enabled: true
+        group: SPRING_CLOUD_GATEWAY
+      server-addr: localhost:8848
+      username: nacos
+      password: nacos
 
-eureka:
-  instance:
-    hostname: cloud-gateway-service
 
-  client:
-    service-url:
-      register-with-eureka: true
-      fetch-registry: true
-      defaultZone: http://eureka7001.com:7001/eureka
+#eureka:
+#  instance:
+#    hostname: cloud-gateway-service
+#
+#  client:
+#    service-url:
+#      register-with-eureka: true
+#      fetch-registry: true
+#      defaultZone: http://eureka7001.com:7001/eureka
