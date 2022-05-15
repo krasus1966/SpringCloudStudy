@@ -8,12 +8,15 @@ import java.lang.reflect.Constructor
  * @date 2022/5/15 10:10
  *
  **/
-class Fans (
-    var id: String,
-    var writerId: String,
-    var fanId: String,
-    var face: String,
-    var fanNickName: String,
-    var sex: Int,
-    var province: String
-)
+data class Fans (
+    var id: String?,
+    var writerId: String?,
+//    var fanId: String?,
+//    var face: String?,
+//    var fanNickName: String?,
+//    var sex: Int?,
+//    var province: String?
+){
+//    constructor() : this(null,null,null,null,null,null,null)
+    constructor() : this(null,null)
+}

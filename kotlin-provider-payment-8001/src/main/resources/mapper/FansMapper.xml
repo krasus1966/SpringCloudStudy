@@ -10,11 +10,11 @@
     <resultMap id="BaseResultMap" type="top.krasus1966.spring_cloud.entity.Fans">
         <id column="id" property="id" jdbcType="VARCHAR" />
         <id column="writer_id" property="writerId" jdbcType="VARCHAR" />
-        <id column="fan_id" property="fanId" jdbcType="VARCHAR" />
-        <id column="face" property="face" jdbcType="VARCHAR" />
-        <id column="fan_nick_name" property="fanNickName" jdbcType="VARCHAR" />
-        <id column="sex" property="sex" jdbcType="INTEGER" />
-        <id column="province" property="province" jdbcType="VARCHAR" />
+<!--        <id column="fan_id" property="fanId" jdbcType="VARCHAR" />-->
+<!--        <id column="face" property="face" jdbcType="VARCHAR" />-->
+<!--        <id column="fan_nick_name" property="fanNickName" jdbcType="VARCHAR" />-->
+<!--        <id column="sex" property="sex" jdbcType="INTEGER" />-->
+<!--        <id column="province" property="province" jdbcType="VARCHAR" />-->
     </resultMap>
     <select id="getFansById" parameterType="String" resultMap="BaseResultMap">
         select * from fans where id=#{id};
