@@ -43,6 +43,7 @@
         <module>seata-storage-service-2002</module>
         <module>seata-account-service-2003</module>
         <module>kotlin-eureka-server-7001</module>
+        <module>kotlin-provider-payment-8001</module>
     </modules>
 
 
